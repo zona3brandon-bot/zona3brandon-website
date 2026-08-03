@@ -5,27 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Zona 3B Brandon: tienda y envíos a Cuba desde Tampa, Florida.">
   <meta name="theme-color" content="#07111f">
-  <meta name="build-version" content="5.2">
-  <link rel="preload" href="styles-v52.css" as="style">
-  <link rel="preload" href="script-v52.js" as="script">
+  <meta name="build-version" content="5.3">
   <title>Zona 3B Brandon | Compra aquí. Envíalo a Cuba.</title>
-  <link rel="icon" href="logo-v52.png">
+  <link rel="icon" href="logo-v53.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles-v52.css">
-
-  <style>
-    .box-offers{padding:38px 0 28px;background:#fff}
-    .carousel{position:relative;display:flex;align-items:center;gap:14px}
-    .carousel-viewport{overflow:hidden;width:100%;border-radius:18px}
-    .carousel-track{display:flex;will-change:transform}
-    .box-slide{flex:0 0 33.333333%;min-width:0;padding:8px;position:relative}
-    .box-slide img{display:block;width:100%;height:280px;object-fit:cover;border-radius:16px}
-    @media(max-width:1000px){.box-slide{flex-basis:50%}}
-    @media(max-width:680px){.box-slide{flex-basis:100%}}
-  </style>
-
+  <link rel="stylesheet" href="styles-v53.css">
 </head>
 <body>
   <div class="topbar">
@@ -33,7 +19,7 @@
       <span>📦 Envíos marítimos, aéreos y express a Cuba</span>
       <div class="topbar-right">
         <a id="top-phone" href="#">☎ <strong>(813) 900-5831</strong></a>
-        <span class="sep"></span>
+        <span class="separator"></span>
         <a href="#" aria-label="Facebook">f</a>
         <a href="#" aria-label="Instagram">◎</a>
         <a id="top-whatsapp" href="#" aria-label="WhatsApp">◉</a>
@@ -44,11 +30,11 @@
   <header class="header">
     <div class="shell nav">
       <a class="brand" href="#inicio">
-        <img src="logo-v52.png" alt="Logo Zona 3B">
+        <img src="logo-v53.png" alt="Logo Zona 3B">
         <div class="brand-copy">
-          <div class="brand-line">ZONA <span>3B</span></div>
-          <div class="brand-sub">BRANDON</div>
-          <div class="brand-tag">BUENO, BONITO Y BARATO</div>
+          <strong>ZONA <span>3B</span></strong>
+          <b>BRANDON</b>
+          <small>BUENO, BONITO Y BARATO</small>
         </div>
       </a>
 
@@ -58,7 +44,7 @@
         <a class="active" href="#inicio">Inicio</a>
         <a href="#envios">Envíos</a>
         <a href="#productos">Productos</a>
-        <a href="#ofertas">Ofertas</a>
+        <a href="#ofertas-cajas">Ofertas</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
         <a class="portal-link" id="portal-link" href="#">Portal empleados</a>
@@ -68,8 +54,11 @@
 
   <main>
     <section class="hero" id="inicio">
+      <div class="hero-background" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
       <div class="shell hero-layout">
-        <div class="hero-copy">
+        <div class="hero-copy glass-panel">
           <span class="eyebrow">BRANDON, FLORIDA → CUBA</span>
           <h1>Compra aquí.<br><span>Envíalo a Cuba.</span></h1>
           <p>Productos, promociones y tres opciones de envío en un solo lugar, con atención personalizada para cada cliente.</p>
@@ -81,24 +70,22 @@
 
           <div class="benefit-row">
             <div>
-              <span class="benefit-symbol">✓</span>
+              <span>✓</span>
               <strong>Precios claros</strong>
               <small>Sin cargos ocultos</small>
             </div>
             <div>
-              <span class="benefit-symbol">◔</span>
+              <span>◔</span>
               <strong>Atención personalizada</strong>
               <small>Estamos para ayudarte</small>
             </div>
             <div>
-              <span class="benefit-symbol">⌖</span>
+              <span>⌖</span>
               <strong>Desde Brandon, FL</strong>
               <small>Hasta toda Cuba</small>
             </div>
           </div>
         </div>
-
-        <div class="hero-scene" aria-hidden="true"></div>
 
         <aside class="calculator" id="calculadora">
           <h2>Calcula tu envío</h2>
@@ -129,108 +116,80 @@
       </div>
     </section>
 
-
-    <section class="box-offers" id="ofertas-cajas">
-      <div class="shell">
-        <div class="box-offers-head">
-          <div>
-            <span class="eyebrow">OFERTAS DE CAJAS</span>
-            <h2>Escoge el tamaño ideal para tu envío</h2>
-            <p>Desliza para ver todas las ofertas disponibles.</p>
-          </div>
-          <a class="red-button" id="boxes-whatsapp" href="#">Consultar ofertas</a>
-        </div>
-
-        <div class="carousel" aria-label="Ofertas de cajas">
-          <button class="carousel-arrow prev" id="carousel-prev" aria-label="Oferta anterior">‹</button>
-          <div class="carousel-viewport">
-            <div class="carousel-track" id="carousel-track">
-              <article class="box-slide">
-                <img src="box-12-v52.png" alt="Caja 12x12x12">
-                <div class="box-slide-copy"><span>Caja 12x12x12</span><strong>$30</strong><small>Precio promocional</small></div>
-              </article>
-              <article class="box-slide">
-                <img src="box-14-v52.png" alt="Caja 14x14x14">
-                <div class="box-slide-copy"><span>Caja 14x14x14</span><strong>$45</strong><small>Precio promocional</small></div>
-              </article>
-              <article class="box-slide">
-                <img src="box-16-v52.png" alt="Caja 16x16x16">
-                <div class="box-slide-copy"><span>Caja 16x16x16</span><strong>$60</strong><small>Precio promocional</small></div>
-              </article>
-              <article class="box-slide">
-                <img src="box-18-v52.png" alt="Caja 18x18x18">
-                <div class="box-slide-copy"><span>Caja 18x18x18</span><strong>$75</strong><small>Precio promocional</small></div>
-              </article>
-            </div>
-          </div>
-          <button class="carousel-arrow next" id="carousel-next" aria-label="Oferta siguiente">›</button>
-        </div>
-        <div class="carousel-dots" id="carousel-dots"></div>
-        <p class="box-offers-note">* La disponibilidad y las condiciones pueden variar. Confirma la oferta con la tienda.</p>
+    <section class="stats-section" id="envios">
+      <div class="shell stats-grid">
+        <article><span>□</span><div><strong>3</strong><b>Opciones de envío</b><small>Marítimo, Aéreo y Express</small></div></article>
+        <article><span>▤</span><div><strong>1</strong><b>Recibo unificado</b><small>Más fácil y organizado</small></div></article>
+        <article><span>◇</span><div><strong>100%</strong><b>Atención local</b><small>Desde Brandon, Florida</small></div></article>
+        <article><span>◷</span><div><strong>Todos los días</strong><b>9:00am – 6:00pm</b><small>Abierto todos los días</small></div></article>
       </div>
     </section>
 
-    <section class="stats-section" id="envios">
-      <div class="shell stats-grid">
-        <article>
-          <span class="stats-icon">□</span>
-          <div><strong>3</strong><b>Opciones de envío</b><small>Marítimo, Aéreo y Express</small></div>
-        </article>
-        <article>
-          <span class="stats-icon">▤</span>
-          <div><strong>1</strong><b>Recibo unificado</b><small>Más fácil y organizado</small></div>
-        </article>
-        <article>
-          <span class="stats-icon">◇</span>
-          <div><strong>100%</strong><b>Atención local</b><small>Desde Brandon, Florida</small></div>
-        </article>
-        <article>
-          <span class="stats-icon">◷</span>
-          <div><strong>Todos los días</strong><b>9:00am – 6:00pm</b><small>Abierto todos los días</small></div>
-        </article>
+    <section class="box-offers" id="ofertas-cajas">
+      <div class="shell">
+        <div class="offers-title">
+          <span></span>
+          <h2>OFERTAS DE CAJAS</h2>
+          <span></span>
+        </div>
+
+        <div class="carousel">
+          <button class="carousel-arrow" id="carousel-prev" aria-label="Anterior">‹</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carousel-track">
+              <article class="box-slide">
+                <div class="box-card"><div><small>CAJA</small><strong>12x12x12</strong><b>$30</b></div><img src="box-12-v53.png" alt="Caja 12x12x12"></div>
+              </article>
+              <article class="box-slide">
+                <div class="box-card"><div><small>CAJA</small><strong>14x14x14</strong><b>$45</b></div><img src="box-14-v53.png" alt="Caja 14x14x14"></div>
+              </article>
+              <article class="box-slide">
+                <div class="box-card"><div><small>CAJA</small><strong>16x16x16</strong><b>$60</b></div><img src="box-16-v53.png" alt="Caja 16x16x16"></div>
+              </article>
+              <article class="box-slide">
+                <div class="box-card"><div><small>CAJA</small><strong>18x18x18</strong><b>$75</b></div><img src="box-18-v53.png" alt="Caja 18x18x18"></div>
+              </article>
+            </div>
+          </div>
+          <button class="carousel-arrow" id="carousel-next" aria-label="Siguiente">›</button>
+        </div>
+
+        <div class="carousel-dots" id="carousel-dots"></div>
       </div>
     </section>
 
     <section class="products-section" id="productos">
       <div class="shell content-grid">
-        <div class="products-panel">
+        <div>
           <div class="section-head">
-            <div>
-              <h2>Productos que te encantan</h2>
-              <p>Encuentra lo mejor para ti y para los que más quieres.</p>
-            </div>
+            <div><h2>Productos que te encantan</h2><p>Encuentra lo mejor para ti y para los que más quieres.</p></div>
             <a class="red-button" id="products-whatsapp" href="#">Ver todos los productos</a>
           </div>
-
           <div class="products-grid">
-            <article><div class="product-visual">🌀</div><strong>Ventiladores</strong></article>
-            <article><div class="product-visual">🔦</div><strong>Lámparas</strong></article>
-            <article><div class="product-visual">🍪</div><strong>Alimentos</strong></article>
-            <article><div class="product-visual">🧴</div><strong>Aseo</strong></article>
-            <article><div class="product-visual">🧼</div><strong>Limpieza</strong></article>
-            <article><div class="product-visual">🍲</div><strong>Hogar</strong></article>
+            <article><div>🌀</div><strong>Ventiladores</strong></article>
+            <article><div>🔦</div><strong>Lámparas</strong></article>
+            <article><div>🍪</div><strong>Alimentos</strong></article>
+            <article><div>🧴</div><strong>Aseo</strong></article>
+            <article><div>🧼</div><strong>Limpieza</strong></article>
+            <article><div>🍲</div><strong>Hogar</strong></article>
           </div>
         </div>
 
         <aside class="visit-card" id="contacto">
           <div class="visit-copy">
             <h3>Visítanos</h3>
-            <div class="visit-line"><span>⌖</span><p><b id="address-1"></b><br><b id="address-2"></b></p></div>
-            <div class="visit-line"><span>◷</span><p><b>Todos los días</b><br>9:00am – 6:00pm</p></div>
+            <p>⌖ <b id="address-1"></b><br><span id="address-2"></span></p>
+            <p>◷ <b>Todos los días</b><br>9:00am – 6:00pm</p>
             <a id="map-link" href="#">Cómo llegar</a>
           </div>
-          <img src="map-preview-v52.jpg" alt="Mapa de ubicación">
+          <img src="map-preview-v53.jpg" alt="Mapa">
         </aside>
       </div>
     </section>
 
     <section class="about-section" id="nosotros">
       <div class="shell about-grid">
-        <div>
-          <span class="eyebrow">ZONA 3B BRANDON</span>
-          <h2>Todo en un solo lugar</h2>
-          <p>Compra productos, prepara tu envío y recibe atención personalizada en la misma visita.</p>
-        </div>
+        <div><span class="eyebrow">ZONA 3B BRANDON</span><h2>Todo en un solo lugar</h2><p>Compra productos, prepara tu envío y recibe atención personalizada en la misma visita.</p></div>
         <div class="about-points">
           <div><b>✓</b><span><strong>Servicio local</strong><small>Atención en español desde Tampa.</small></span></div>
           <div><b>✓</b><span><strong>Opciones para cada necesidad</strong><small>Marítimo, aéreo y express.</small></span></div>
@@ -238,33 +197,20 @@
         </div>
       </div>
     </section>
-
-    <section class="offers-section" id="ofertas">
-      <div class="shell offers-box">
-        <div>
-          <span>OFERTAS Y PROMOCIONES</span>
-          <h2>Pregunta por los productos disponibles esta semana</h2>
-        </div>
-        <a class="btn btn-secondary" id="offers-whatsapp" href="#">Escribir por WhatsApp</a>
-      </div>
-    </section>
   </main>
 
-  <a class="floating floating-whatsapp" id="floating-whatsapp" href="#" aria-label="WhatsApp">●</a>
-  <a class="floating floating-up" href="#inicio" aria-label="Volver arriba">↑</a>
+  <a class="floating floating-whatsapp" id="floating-whatsapp" href="#">●</a>
+  <a class="floating floating-up" href="#inicio">↑</a>
 
   <footer>
     <div class="shell footer-grid">
-      <div class="footer-brand">
-        <img src="logo-v52.png" alt="">
-        <span><b>Zona 3B Brandon</b><small>Bueno, bonito y barato</small></span>
-      </div>
+      <div><b>Zona 3B Brandon</b><p>Bueno, bonito y barato</p></div>
       <div><b>Contacto</b><p>(813) 900-5831<br>2135 South 78th St<br>Tampa, FL 33619</p></div>
       <div><b>Horario</b><p>Todos los días<br>9:00am – 6:00pm</p></div>
     </div>
   </footer>
 
   <script src="config.js"></script>
-  <script src="script-v52.js"></script>
+  <script src="script-v53.js"></script>
 </body>
 </html>
