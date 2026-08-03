@@ -5,12 +5,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Zona 3B Brandon: tienda y envíos a Cuba desde Tampa, Florida.">
   <meta name="theme-color" content="#07111f">
+  <meta name="build-version" content="5.2">
+  <link rel="preload" href="styles-v52.css" as="style">
+  <link rel="preload" href="script-v52.js" as="script">
   <title>Zona 3B Brandon | Compra aquí. Envíalo a Cuba.</title>
-  <link rel="icon" href="logo.png">
+  <link rel="icon" href="logo-v52.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-v52.css">
+
+  <style>
+    .box-offers{padding:38px 0 28px;background:#fff}
+    .carousel{position:relative;display:flex;align-items:center;gap:14px}
+    .carousel-viewport{overflow:hidden;width:100%;border-radius:18px}
+    .carousel-track{display:flex;will-change:transform}
+    .box-slide{flex:0 0 33.333333%;min-width:0;padding:8px;position:relative}
+    .box-slide img{display:block;width:100%;height:280px;object-fit:cover;border-radius:16px}
+    @media(max-width:1000px){.box-slide{flex-basis:50%}}
+    @media(max-width:680px){.box-slide{flex-basis:100%}}
+  </style>
+
 </head>
 <body>
   <div class="topbar">
@@ -29,7 +44,7 @@
   <header class="header">
     <div class="shell nav">
       <a class="brand" href="#inicio">
-        <img src="logo.png" alt="Logo Zona 3B">
+        <img src="logo-v52.png" alt="Logo Zona 3B">
         <div class="brand-copy">
           <div class="brand-line">ZONA <span>3B</span></div>
           <div class="brand-sub">BRANDON</div>
@@ -131,19 +146,19 @@
           <div class="carousel-viewport">
             <div class="carousel-track" id="carousel-track">
               <article class="box-slide">
-                <img src="box-12.png" alt="Caja 12x12x12">
+                <img src="box-12-v52.png" alt="Caja 12x12x12">
                 <div class="box-slide-copy"><span>Caja 12x12x12</span><strong>$30</strong><small>Precio promocional</small></div>
               </article>
               <article class="box-slide">
-                <img src="box-14.png" alt="Caja 14x14x14">
+                <img src="box-14-v52.png" alt="Caja 14x14x14">
                 <div class="box-slide-copy"><span>Caja 14x14x14</span><strong>$45</strong><small>Precio promocional</small></div>
               </article>
               <article class="box-slide">
-                <img src="box-16.png" alt="Caja 16x16x16">
+                <img src="box-16-v52.png" alt="Caja 16x16x16">
                 <div class="box-slide-copy"><span>Caja 16x16x16</span><strong>$60</strong><small>Precio promocional</small></div>
               </article>
               <article class="box-slide">
-                <img src="box-18.png" alt="Caja 18x18x18">
+                <img src="box-18-v52.png" alt="Caja 18x18x18">
                 <div class="box-slide-copy"><span>Caja 18x18x18</span><strong>$75</strong><small>Precio promocional</small></div>
               </article>
             </div>
@@ -204,7 +219,7 @@
             <div class="visit-line"><span>◷</span><p><b>Todos los días</b><br>9:00am – 6:00pm</p></div>
             <a id="map-link" href="#">Cómo llegar</a>
           </div>
-          <img src="map-preview.jpg" alt="Mapa de ubicación">
+          <img src="map-preview-v52.jpg" alt="Mapa de ubicación">
         </aside>
       </div>
     </section>
@@ -241,7 +256,7 @@
   <footer>
     <div class="shell footer-grid">
       <div class="footer-brand">
-        <img src="logo.png" alt="">
+        <img src="logo-v52.png" alt="">
         <span><b>Zona 3B Brandon</b><small>Bueno, bonito y barato</small></span>
       </div>
       <div><b>Contacto</b><p>(813) 900-5831<br>2135 South 78th St<br>Tampa, FL 33619</p></div>
@@ -250,6 +265,6 @@
   </footer>
 
   <script src="config.js"></script>
-  <script src="script.js"></script>
+  <script src="script-v52.js"></script>
 </body>
 </html>
