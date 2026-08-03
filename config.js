@@ -1,12 +1,12 @@
 window.ZONA3B_CONFIG = {
   store: {
     name: "Zona 3B Brandon",
-    phoneDisplay: "(000) 000-0000",
-    phoneDigits: "10000000000",
-    whatsappDigits: "10000000000",
-    address: "Agrega aquí la dirección de la tienda",
+    phoneDisplay: "(813) 900-5831",
+    phoneDigits: "18139005831",
+    whatsappDigits: "18139005831",
+    address: "2135 South 78th St, Tampa, FL 33619",
     hours: "Lunes a sábado: 9:00 a. m. – 7:00 p. m.",
-    mapsUrl: "https://www.google.com/maps",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=2135+South+78th+St%2C+Tampa%2C+FL+33619",
     portalUrl: "https://portal.zona3brandon.us",
     facebookUrl: "#",
     instagramUrl: "#"

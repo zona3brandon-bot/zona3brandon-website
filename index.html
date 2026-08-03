@@ -126,11 +126,7 @@
           <div id="shipment-list"></div>
           <button type="button" class="add-shipment" id="add-shipment">＋ <span data-i18n="addShipment">Agregar otro envío</span></button>
 
-          <div class="extra-grid">
-            <label>
-              <span data-i18n="customs">Aduana</span>
-              <input id="customs" type="number" min="0" step="0.01" value="0">
-            </label>
+          <div class="extra-grid single-option">
             <label class="check-label">
               <input id="store-box" type="checkbox">
               <span data-i18n="storeBox">Agregar caja de la tienda</span>
@@ -141,10 +137,9 @@
             <div><span data-i18n="shippingSubtotal">Subtotal envíos</span><b id="shipping-subtotal">$0.00</b></div>
             <div><span data-i18n="systemFee">Cargo del sistema</span><b id="system-fee">$0.00</b></div>
             <div><span data-i18n="boxFee">Caja</span><b id="box-fee">$0.00</b></div>
-            <div><span data-i18n="customsFee">Aduana</span><b id="customs-fee">$0.00</b></div>
             <div class="grand-total"><span data-i18n="estimatedTotal">Total estimado</span><b id="grand-total">$0.00</b></div>
           </div>
-          <small class="legal-note" data-i18n="estimateNote">Estimado informativo. Confirma siempre el total final con la tienda.</small>
+          <small class="legal-note" data-i18n="estimateNote">Estimado informativo. La aduana no se calcula en la página pública porque puede variar; confirma siempre el total final con la tienda.</small>
         </div>
       </div>
     </section>
