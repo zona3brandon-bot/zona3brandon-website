@@ -11,6 +11,7 @@ function setupLinks() {
   document.getElementById("hero-whatsapp").href = whatsappUrl("Hola, quiero información sobre productos y envíos.");
   document.getElementById("products-whatsapp").href = whatsappUrl("Hola, quiero conocer los productos disponibles.");
   document.getElementById("offers-whatsapp").href = whatsappUrl("Hola, quiero conocer las ofertas vigentes.");
+  document.getElementById("boxes-whatsapp").href = whatsappUrl("Hola, quiero información sobre las ofertas de cajas 12x12x12, 14x14x14, 16x16x16 y 18x18x18.");
   document.getElementById("floating-whatsapp").href = whatsappUrl("Hola, quiero información.");
   document.getElementById("map-link").href = cfg.mapsUrl;
   document.getElementById("address-1").textContent = cfg.addressLine1;
@@ -45,6 +46,80 @@ function calculate() {
   document.getElementById("total-cost").textContent = money(total);
 }
 
+
+function setupCarousel() {
+  const track = document.getElementById("carousel-track");
+  const slides = Array.from(track.children);
+  const dotsHolder = document.getElementById("carousel-dots");
+  const prev = document.getElementById("carousel-prev");
+  const next = document.getElementById("carousel-next");
+  let index = 0;
+  let timer;
+
+  function visibleSlides() {
+    if (window.innerWidth <= 680) return 1;
+    if (window.innerWidth <= 1000) return 2;
+    return 3;
+  }
+
+  function maxIndex() {
+    return Math.max(0, slides.length - visibleSlides());
+  }
+
+  function renderDots() {
+    dotsHolder.innerHTML = "";
+    for (let i = 0; i <= maxIndex(); i++) {
+      const dot = document.createElement("button");
+      dot.className = `carousel-dot ${i === index ? "active" : ""}`;
+      dot.setAttribute("aria-label", `Ir a oferta ${i + 1}`);
+      dot.addEventListener("click", () => {
+        index = i;
+        update();
+        restart();
+      });
+      dotsHolder.appendChild(dot);
+    }
+  }
+
+  function update() {
+    if (index > maxIndex()) index = maxIndex();
+    const percent = 100 / visibleSlides();
+    track.style.transform = `translateX(-${index * percent}%)`;
+    Array.from(dotsHolder.children).forEach((dot, i) => dot.classList.toggle("active", i === index));
+  }
+
+  function goNext() {
+    index = index >= maxIndex() ? 0 : index + 1;
+    update();
+  }
+
+  function goPrev() {
+    index = index <= 0 ? maxIndex() : index - 1;
+    update();
+  }
+
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(goNext, 3500);
+  }
+
+  next.addEventListener("click", () => { goNext(); restart(); });
+  prev.addEventListener("click", () => { goPrev(); restart(); });
+  window.addEventListener("resize", () => { renderDots(); update(); });
+
+  let startX = 0;
+  track.addEventListener("touchstart", e => startX = e.touches[0].clientX, {passive:true});
+  track.addEventListener("touchend", e => {
+    const delta = e.changedTouches[0].clientX - startX;
+    if (Math.abs(delta) > 45) delta < 0 ? goNext() : goPrev();
+    restart();
+  }, {passive:true});
+
+  renderDots();
+  update();
+  restart();
+}
+
 function setupMenu() {
   const button = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".menu");
@@ -61,3 +136,4 @@ calculate();
 document.getElementById("pounds").addEventListener("input", calculate);
 document.getElementById("store-box").addEventListener("change", calculate);
 setupMenu();
+setupCarousel();
