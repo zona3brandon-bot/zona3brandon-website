@@ -4,7 +4,8 @@ window.ZONA3B_SITE = {
   whatsappDigits: "18139005831",
   addressLine1: "2135 South 78th St",
   addressLine2: "Tampa, FL 33619",
-  hours: "Todos los días · 9:00am – 6:00pm",
+  hoursLine1: "Todos los días",
+  hoursLine2: "9:00am – 6:00pm",
   portalUrl: "https://portal.zona3brandon.us",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=2135+South+78th+St%2C+Tampa%2C+FL+33619",
   rates: {
