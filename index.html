@@ -1,13 +1,10 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Zona 3B Brandon: tienda, promociones y envíos marítimos, aéreos y express a Cuba desde Brandon, Florida.">
   <meta name="theme-color" content="#f97316">
-  <meta property="og:title" content="Zona 3B Brandon">
-  <meta property="og:description" content="Tienda y envíos a Cuba desde Brandon, Florida.">
-  <meta property="og:type" content="website">
   <title>Zona 3B Brandon | Tienda y envíos a Cuba</title>
   <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,219 +15,204 @@
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <span>📦 Envíos marítimos, aéreos y express a Cuba</span>
-      <a id="top-phone" href="#">Llámanos</a>
+      <span data-i18n="topbar">📦 Envíos marítimos, aéreos y express a Cuba</span>
+      <div class="top-actions">
+        <a id="top-phone" href="#"></a>
+        <button id="lang-toggle" class="icon-button" aria-label="Cambiar idioma">EN</button>
+        <button id="theme-toggle" class="icon-button" aria-label="Cambiar tema">◐</button>
+      </div>
     </div>
   </div>
 
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="#inicio" aria-label="Zona 3B Brandon">
+      <a class="brand" href="#inicio">
         <img src="logo.svg" alt="">
         <span><b>Zona 3B</b><small>Brandon</small></span>
       </a>
       <button class="menu-button" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <nav class="menu">
-        <a href="#inicio">Inicio</a>
-        <a href="#envios">Envíos</a>
-        <a href="#productos">Productos</a>
-        <a href="#ofertas">Ofertas</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a class="portal-button" id="portal-link" href="#">Portal empleados</a>
+        <a href="#inicio" data-i18n="navHome">Inicio</a>
+        <a href="#envios" data-i18n="navShipping">Envíos</a>
+        <a href="#productos" data-i18n="navProducts">Productos</a>
+        <a href="#calculadora" data-i18n="navCalculator">Calculadora</a>
+        <a href="#opiniones" data-i18n="navReviews">Opiniones</a>
+        <a href="#contacto" data-i18n="navContact">Contacto</a>
+        <a class="portal-button" id="portal-link" href="#" data-i18n="portal">Portal empleados</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="hero-glow hero-glow-one"></div>
-      <div class="hero-glow hero-glow-two"></div>
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <span class="pill">Brandon, Florida → Cuba</span>
-          <h1>Compra aquí.<br><span>Envíalo a Cuba.</span></h1>
-          <p>Productos, promociones y tres opciones de envío en un solo lugar, con atención personalizada para cada cliente.</p>
+          <span class="pill" data-i18n="route">Brandon, Florida → Cuba</span>
+          <h1 data-i18n-html="heroTitle">Compra aquí.<br><span>Envíalo a Cuba.</span></h1>
+          <p data-i18n="heroText">Productos, promociones y tres opciones de envío en un solo lugar, con atención personalizada para cada cliente.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#calculadora">Calcular envío</a>
-            <a class="button secondary" id="hero-whatsapp" href="#">Escribir por WhatsApp</a>
+            <a class="button primary" href="#calculadora" data-i18n="calculate">Calcular envío</a>
+            <a class="button secondary" id="hero-whatsapp" href="#" data-i18n="whatsapp">Escribir por WhatsApp</a>
           </div>
-          <div class="trust-row">
-            <div><b>3</b><span>Tipos de envío</span></div>
-            <div><b>1</b><span>Recibo unificado</span></div>
-            <div><b>100%</b><span>Atención local</span></div>
+          <div class="stats">
+            <div><strong class="counter" data-target="3">0</strong><span data-i18n="statShipping">Tipos de envío</span></div>
+            <div><strong class="counter" data-target="1">0</strong><span data-i18n="statReceipt">Recibo unificado</span></div>
+            <div><strong class="counter" data-target="100" data-suffix="%">0</strong><span data-i18n="statLocal">Atención local</span></div>
           </div>
         </div>
 
         <div class="hero-visual reveal">
-          <div class="route-card">
-            <div class="route-head">
-              <span>Ruta principal</span>
-              <b>Brandon → Cuba</b>
+          <div class="logistics-card">
+            <div class="logistics-head">
+              <div><small data-i18n="mainRoute">Ruta principal</small><strong>Brandon → Cuba</strong></div>
+              <span class="status-dot" data-i18n="active">Activo</span>
             </div>
-            <div class="map-shape">
-              <span class="pin pin-us">📍</span>
-              <span class="route-line"></span>
-              <span class="plane">✈</span>
-              <span class="pin pin-cu">📍</span>
+            <div class="route-visual">
+              <div class="land florida">FL</div>
+              <div class="route-path"></div>
+              <div class="moving-plane">✈</div>
+              <div class="land cuba">CU</div>
             </div>
-            <div class="quick-rates" id="hero-rates"></div>
+            <div class="rate-strip" id="hero-rates"></div>
           </div>
-          <div class="floating-card card-one">✓ Precios claros</div>
-          <div class="floating-card card-two">📦 Atención personalizada</div>
+          <div class="floating-note note-one">✓ <span data-i18n="clearPrices">Precios claros</span></div>
+          <div class="floating-note note-two">📦 <span data-i18n="personalCare">Atención personalizada</span></div>
         </div>
       </div>
     </section>
 
-    <section class="services section" id="envios">
+    <section class="section shipping" id="envios">
       <div class="container">
         <div class="section-heading reveal">
-          <span class="eyebrow">Servicios de envío</span>
-          <h2>Una opción para cada necesidad</h2>
-          <p>Escoge según tu presupuesto, el peso y la rapidez que necesitas.</p>
+          <span class="eyebrow" data-i18n="shippingEyebrow">Servicios de envío</span>
+          <h2 data-i18n="shippingTitle">Una opción para cada necesidad</h2>
+          <p data-i18n="shippingSubtitle">Compara precio, velocidad y conveniencia.</p>
         </div>
-        <div class="service-grid" id="service-grid"></div>
+        <div class="shipping-grid" id="shipping-grid"></div>
       </div>
     </section>
 
-    <section class="calculator-section section" id="calculadora">
-      <div class="container calculator-wrap reveal">
+    <section class="section products" id="productos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow" data-i18n="productsEyebrow">Tienda</span>
+          <h2 data-i18n="productsTitle">Productos destacados</h2>
+          <p data-i18n="productsSubtitle">Consulta disponibilidad y precio actual por WhatsApp.</p>
+        </div>
+        <div class="product-toolbar reveal">
+          <input id="product-search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Buscar productos...">
+          <div id="category-filters" class="filters"></div>
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="calculadora">
+      <div class="container calculator-shell reveal">
         <div class="calculator-copy">
-          <span class="eyebrow light">Calculadora de envío</span>
-          <h2>Obtén un estimado en segundos</h2>
-          <p>El cálculo usa la tarifa por libra. No incluye caja, cargo del sistema, aduana ni cargos adicionales.</p>
-          <ul>
-            <li>Selecciona el tipo de envío</li>
-            <li>Escribe el peso total</li>
-            <li>Obtén el estimado inmediatamente</li>
-          </ul>
-        </div>
-        <form class="calculator" id="calculator-form">
-          <label>Tipo de envío
-            <select id="shipping-type"></select>
-          </label>
-          <label>Peso total en libras
-            <input id="weight" type="number" min="0" step="0.1" placeholder="Ejemplo: 25">
-          </label>
-          <div class="estimate-box">
-            <span>Estimado</span>
-            <strong id="estimate">$0.00</strong>
-            <small id="estimate-description">Selecciona el servicio y agrega las libras.</small>
+          <span class="eyebrow light" data-i18n="calculatorEyebrow">Calculadora avanzada</span>
+          <h2 data-i18n="calculatorTitle">Obtén un estimado más completo</h2>
+          <p data-i18n="calculatorSubtitle">Puedes sumar caja de la tienda, cargo del sistema y aduana.</p>
+          <div class="calculator-notes">
+            <span>✓ <b data-i18n="instant">Resultado instantáneo</b></span>
+            <span>✓ <b data-i18n="multiple">Permite varios envíos</b></span>
+            <span>✓ <b data-i18n="transparent">Detalle transparente</b></span>
           </div>
-          <button class="button white" type="submit">Calcular ahora</button>
-        </form>
+        </div>
+
+        <div class="calculator-card">
+          <div id="shipment-list"></div>
+          <button type="button" class="add-shipment" id="add-shipment">＋ <span data-i18n="addShipment">Agregar otro envío</span></button>
+
+          <div class="extra-grid">
+            <label>
+              <span data-i18n="customs">Aduana</span>
+              <input id="customs" type="number" min="0" step="0.01" value="0">
+            </label>
+            <label class="check-label">
+              <input id="store-box" type="checkbox">
+              <span data-i18n="storeBox">Agregar caja de la tienda</span>
+            </label>
+          </div>
+
+          <div class="summary" id="summary">
+            <div><span data-i18n="shippingSubtotal">Subtotal envíos</span><b id="shipping-subtotal">$0.00</b></div>
+            <div><span data-i18n="systemFee">Cargo del sistema</span><b id="system-fee">$0.00</b></div>
+            <div><span data-i18n="boxFee">Caja</span><b id="box-fee">$0.00</b></div>
+            <div><span data-i18n="customsFee">Aduana</span><b id="customs-fee">$0.00</b></div>
+            <div class="grand-total"><span data-i18n="estimatedTotal">Total estimado</span><b id="grand-total">$0.00</b></div>
+          </div>
+          <small class="legal-note" data-i18n="estimateNote">Estimado informativo. Confirma siempre el total final con la tienda.</small>
+        </div>
       </div>
     </section>
 
-    <section class="products section" id="productos">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Productos</span>
-          <h2>Encuentra lo que tu familia necesita</h2>
-          <p>Consulta disponibilidad y precios actuales directamente con la tienda.</p>
-        </div>
-
-        <div class="product-tools reveal">
-          <input id="product-search" type="search" placeholder="Buscar productos o categorías...">
-          <div class="filters" id="category-filters"></div>
-        </div>
-
-        <div class="product-grid" id="product-grid"></div>
-      </div>
-    </section>
-
-    <section class="offers section" id="ofertas">
+    <section class="section offers">
       <div class="container">
         <div class="offer-banner reveal">
           <div>
-            <span class="eyebrow light">Promociones semanales</span>
-            <h2>Pregunta por nuestras ofertas y productos destacados</h2>
-            <p>Escríbenos para recibir disponibilidad, precios y promociones vigentes.</p>
+            <span class="eyebrow light" data-i18n="offersEyebrow">Promociones</span>
+            <h2 data-i18n="offersTitle">Ofertas nuevas durante todo el mes</h2>
+            <p data-i18n="offersText">Pregunta por teléfonos, ventiladores recargables, cajas y productos para el hogar.</p>
           </div>
-          <a class="button white" id="offers-whatsapp" href="#">Ver promociones</a>
-        </div>
-
-        <div class="offer-grid">
-          <article class="offer-card reveal">
-            <span>📦</span><h3>Ofertas de cajas</h3>
-            <p>Consulta tamaños disponibles y precios especiales para envíos seleccionados.</p>
-          </article>
-          <article class="offer-card reveal">
-            <span>📱</span><h3>Teléfonos y accesorios</h3>
-            <p>Nuevos productos y oportunidades disponibles durante el mes.</p>
-          </article>
-          <article class="offer-card reveal">
-            <span>🌀</span><h3>Ventiladores recargables</h3>
-            <p>Soluciones prácticas para el hogar y para enviar a Cuba.</p>
-          </article>
+          <a id="offers-whatsapp" class="button white" href="#" data-i18n="seeOffers">Ver promociones</a>
         </div>
       </div>
     </section>
 
-    <section class="about section" id="nosotros">
-      <div class="container about-grid">
-        <div class="about-visual reveal">
-          <div class="store-card">
-            <img src="logo.svg" alt="Logo de Zona 3B Brandon">
-            <strong>Zona 3B Brandon</strong>
-            <span>Tienda • Envíos • Comunidad</span>
-          </div>
+    <section class="section reviews" id="opiniones">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow" data-i18n="reviewsEyebrow">Opiniones</span>
+          <h2 data-i18n="reviewsTitle">Lo que valoran nuestros clientes</h2>
         </div>
-        <div class="about-copy reveal">
-          <span class="eyebrow">Sobre nosotros</span>
-          <h2>Un negocio local al servicio de nuestra comunidad</h2>
-          <p>Zona 3B Brandon reúne tienda y servicios de envío para que puedas comprar productos y preparar tus paquetes en una sola visita.</p>
-          <div class="feature-list">
-            <div><b>✓</b><span><strong>Atención directa</strong><small>Te ayudamos a escoger el servicio adecuado.</small></span></div>
-            <div><b>✓</b><span><strong>Proceso sencillo</strong><small>Ventas y envíos pueden quedar en un solo recibo.</small></span></div>
-            <div><b>✓</b><span><strong>Información clara</strong><small>Conoce las tarifas y condiciones antes de pagar.</small></span></div>
-          </div>
-        </div>
+        <div id="review-grid" class="review-grid"></div>
       </div>
     </section>
 
-    <section class="contact section" id="contacto">
+    <section class="section contact" id="contacto">
       <div class="container contact-grid">
         <div class="contact-info reveal">
-          <span class="eyebrow light">Visítanos</span>
-          <h2>Estamos en Brandon, Florida</h2>
-          <p>Comunícate con nosotros para confirmar precios, disponibilidad y horarios.</p>
-          <div class="contact-items">
-            <a id="contact-phone" href="#"><span>📞</span><div><small>Teléfono</small><b id="phone-display"></b></div></a>
-            <a id="contact-whatsapp" href="#"><span>💬</span><div><small>WhatsApp</small><b>Escríbenos ahora</b></div></a>
-            <a id="contact-map" href="#"><span>📍</span><div><small>Dirección</small><b id="address-display"></b></div></a>
-            <div><span>🕒</span><div><small>Horario</small><b id="hours-display"></b></div></div>
+          <span class="eyebrow light" data-i18n="contactEyebrow">Contacto</span>
+          <h2 data-i18n="contactTitle">Visítanos en Brandon</h2>
+          <p data-i18n="contactText">Confirma horarios, disponibilidad y precios antes de visitar la tienda.</p>
+          <div class="contact-list">
+            <a id="contact-phone" href="#"><span>📞</span><div><small data-i18n="phone">Teléfono</small><b id="phone-display"></b></div></a>
+            <a id="contact-whatsapp" href="#"><span>💬</span><div><small>WhatsApp</small><b data-i18n="writeNow">Escríbenos ahora</b></div></a>
+            <a id="contact-map" href="#"><span>📍</span><div><small data-i18n="address">Dirección</small><b id="address-display"></b></div></a>
+            <div><span>🕒</span><div><small data-i18n="hours">Horario</small><b id="hours-display"></b></div></div>
           </div>
         </div>
 
         <form class="contact-form reveal" id="contact-form">
-          <h3>Solicita información</h3>
-          <label>Nombre<input id="name" required placeholder="Tu nombre"></label>
-          <label>Teléfono<input id="phone" required placeholder="Tu número de teléfono"></label>
-          <label>Servicio
+          <h3 data-i18n="requestInfo">Solicita información</h3>
+          <label><span data-i18n="name">Nombre</span><input id="name" required></label>
+          <label><span data-i18n="phone">Teléfono</span><input id="phone" required></label>
+          <label><span data-i18n="service">Servicio</span>
             <select id="service">
-              <option>Envío marítimo</option>
-              <option>Envío aéreo</option>
-              <option>Envío express</option>
-              <option>Productos y promociones</option>
-              <option>Otra consulta</option>
+              <option data-i18n="maritimeOption">Envío marítimo</option>
+              <option data-i18n="airOption">Envío aéreo</option>
+              <option data-i18n="expressOption">Envío express</option>
+              <option data-i18n="productsOption">Productos y promociones</option>
             </select>
           </label>
-          <label>Mensaje<textarea id="message" rows="4" required placeholder="Escribe tu consulta"></textarea></label>
-          <button class="button primary" type="submit">Enviar por WhatsApp</button>
+          <label><span data-i18n="message">Mensaje</span><textarea id="message" rows="4" required></textarea></label>
+          <button class="button primary" type="submit" data-i18n="sendWhatsapp">Enviar por WhatsApp</button>
         </form>
       </div>
     </section>
 
     <section class="notice">
       <div class="container">
-        <strong>Información importante:</strong>
-        <span>Los precios y tiempos son estimados y pueden variar por destino, aduana, transportación y otras condiciones. Confirma siempre el total final con el personal de la tienda.</span>
+        <strong data-i18n="important">Información importante:</strong>
+        <span data-i18n="importantText">Los precios y tiempos pueden variar por destino, aduana, transportación y otras condiciones.</span>
       </div>
     </section>
   </main>
 
-  <a class="whatsapp-float" id="floating-whatsapp" href="#" aria-label="Contactar por WhatsApp">💬</a>
+  <a id="floating-whatsapp" class="whatsapp-float" href="#" aria-label="WhatsApp">💬</a>
 
   <footer>
     <div class="container footer-grid">
@@ -239,12 +221,11 @@
         <span><b>Zona 3B</b><small>Brandon</small></span>
       </a>
       <div class="footer-links">
-        <a href="#envios">Envíos</a>
-        <a href="#productos">Productos</a>
-        <a href="#ofertas">Ofertas</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#envios" data-i18n="navShipping">Envíos</a>
+        <a href="#productos" data-i18n="navProducts">Productos</a>
+        <a href="#contacto" data-i18n="navContact">Contacto</a>
       </div>
-      <p>© <span id="year"></span> Zona 3B Brandon. Todos los derechos reservados.</p>
+      <p>© <span id="year"></span> Zona 3B Brandon</p>
     </div>
   </footer>
 
