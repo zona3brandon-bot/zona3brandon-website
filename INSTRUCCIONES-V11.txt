@@ -1,0 +1,8 @@
+ZONA 3B TRACKING PRO V11
+
+1. Suba todo el contenido de esta carpeta al repositorio zona3brandon-website.
+2. Reemplace los archivos existentes.
+3. Haga commit con: ACTUALIZACION V11 TRACKING PRO
+4. Espere el despliegue de Cloudflare Pages.
+
+No es necesario modificar el servidor de Render v10.1.
