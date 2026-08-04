@@ -7,7 +7,8 @@ function setupLinks(){
   document.getElementById("portal-link").href = cfg.portalUrl;
   document.getElementById("top-phone").href = `tel:+${cfg.phoneDigits}`;
   document.getElementById("top-whatsapp").href = wa("Hola, quiero información sobre Zona 3B Brandon.");
-  document.getElementById("hero-whatsapp").href = wa("Hola, quiero información sobre productos y envíos.");
+  document.getElementById("hero-whatsapp").href = wa("Hola, quiero información sobre los productos y servicios de Zona 3B Brandon.");
+  document.getElementById("money-whatsapp").href = wa("Hola, deseo información sobre el servicio de envío de dinero a Cuba.");
   document.getElementById("products-whatsapp").href = wa("Hola, quiero conocer los productos disponibles.");
   document.getElementById("floating-whatsapp").href = wa("Hola, quiero información.");
   document.getElementById("map-link").href = cfg.mapsUrl;
