@@ -1,13 +1,17 @@
-# Zona 3B Brandon v6.1
+# Zona 3B Brandon — Actualización v6.2
 
-Actualización del sitio con:
-- Envíos marítimo, aéreo y express.
-- Tienda y ofertas de cajas.
-- Anuncio del servicio presencial de envío de dinero a Cuba.
-- Avisos claros de que el envío de dinero no se realiza mediante el sitio web.
-- Botones para consultar requisitos y obtener indicaciones hacia la tienda.
-- Calculadora de envíos.
-- Diseño responsive para móviles y computadoras.
+Actualización lista para GitHub y Cloudflare Pages.
+
+## Cambios
+- Logo oficial de **La Zona 3B** en encabezado, pie de página y favicon.
+- Eliminado el filtro blanco aplicado al logo anterior.
+- Calculadora con fondo blanco y limpio, sin fondo oscuro.
+- Archivos CSS y JavaScript renombrados para evitar que Cloudflare muestre una versión almacenada en caché.
+- El envío de dinero continúa identificado como servicio exclusivamente presencial en la tienda.
 
 ## Publicación
-Sube todos los archivos a la raíz del repositorio de GitHub o del proyecto de Cloudflare Pages. El archivo principal es `index.html`.
+1. Extrae el ZIP.
+2. En GitHub, elimina o reemplaza los archivos anteriores del repositorio.
+3. Sube todos los archivos de esta carpeta a la raíz del repositorio.
+4. Confirma el commit.
+5. En Cloudflare Pages, verifica que se complete el nuevo deployment.
