@@ -3,148 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Zona 3B Brandon: envíos marítimos, aéreos y express a Cuba, productos y servicio personalizado desde Brandon, Florida.">
+  <meta name="description" content="Zona 3B Brandon: envíos marítimos, aéreos y express a Cuba desde Brandon, Florida.">
   <meta name="theme-color" content="#061a3a">
-  <meta name="build-version" content="5.6">
+  <meta name="build-version" content="6.0">
   <title>Zona 3B Brandon | Envíos a Cuba</title>
   <link rel="icon" href="logo-v54.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles-v54.css">
+  <link rel="stylesheet" href="styles-v60.css?v=6.0.0">
 </head>
 <body>
-  <header class="site-header">
-    <div class="shell nav-wrap">
-      <a class="brand" href="#inicio" aria-label="Zona 3B Brandon">
-        <img src="logo-v54.png" alt="Zona 3B Brandon">
-      </a>
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-      <nav class="menu">
-        <a class="active" href="#inicio">Inicio</a>
-        <a href="#productos">Tienda</a>
-        <a href="#envios">Envíos a Cuba</a>
-        <a href="#calculadora">Cómo funciona</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a class="portal-link" id="portal-link" href="#">Portal</a>
-      </nav>
-      <a class="cart-button" href="#productos" aria-label="Ir a productos">🛒<span>0</span></a>
+<header class="site-header">
+  <div class="shell nav-wrap">
+    <a class="brand" href="#inicio"><img src="logo-v54.png" alt="Zona 3B Brandon"></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="menu">
+      <a class="active" href="#inicio">Inicio</a><a href="#productos">Tienda</a><a href="#envios">Envíos a Cuba</a><a href="#calculadora">Cómo funciona</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a><a class="portal-link" id="portal-link" href="#">Portal</a>
+    </nav>
+    <a class="cart-button" href="#productos" aria-label="Carrito">🛒<span>0</span></a>
+  </div>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-scene"></div>
+  <div class="hero-overlay"></div>
+  <div class="shell hero-inner">
+    <div class="hero-copy">
+      <span class="hero-kicker">DESDE BRANDON, FLORIDA</span>
+      <h1>ENVÍOS A CUBA</h1>
+      <h2>RÁPIDOS, SEGUROS Y CONFIABLES</h2>
+      <p>Llevamos lo que más quieres a quienes más quieres, con atención personalizada y precios claros.</p>
+      <div class="hero-features">
+        <article><span>⌂</span><div><strong>ENTREGAS SEGURAS</strong><small>En toda Cuba</small></div></article>
+        <article><span>✓</span><div><strong>PRECIOS BAJOS</strong><small>Y competitivos</small></div></article>
+        <article><span>◉</span><div><strong>ATENCIÓN PERSONALIZADA</strong><small>Siempre contigo</small></div></article>
+      </div>
+      <div class="hero-actions"><a class="btn-primary" href="#calculadora">COTIZA TU ENVÍO</a><a class="btn-ghost" id="hero-whatsapp" href="#">WHATSAPP</a></div>
     </div>
-  </header>
-
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero-bg"></div>
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <span class="hero-kicker">DESDE BRANDON, FLORIDA</span>
-          <h1>ENVÍOS A CUBA</h1>
-          <h2>RÁPIDOS, SEGUROS Y CONFIABLES</h2>
-          <p>Llevamos lo que más quieres a quienes más quieres, con atención personalizada y precios claros.</p>
-
-          <div class="hero-features">
-            <article><span>⌂</span><div><strong>ENTREGAS SEGURAS</strong><small>En toda Cuba</small></div></article>
-            <article><span>✓</span><div><strong>PRECIOS BAJOS</strong><small>Y competitivos</small></div></article>
-            <article><span>◉</span><div><strong>ATENCIÓN PERSONALIZADA</strong><small>Siempre contigo</small></div></article>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn-primary" href="#calculadora">COTIZA TU ENVÍO</a>
-            <a class="btn-ghost" id="hero-whatsapp" href="#">WHATSAPP</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-label="Envíos de Zona 3B Brandon a Cuba">
-          <img src="hero-reference-v56.png" alt="La Habana, bandera cubana y caja de productos Zona 3B">
-        </div>
-      </div>
-    </section>
-
-    <section class="services" id="envios">
-      <div class="shell">
-        <div class="section-label">NUESTROS SERVICIOS</div>
-        <div class="service-grid">
-          <article><span class="service-icon">🚢</span><div><strong>ENVÍO MARÍTIMO</strong><b>Desde $1.99 / lb</b><small>Entrega de 30 a 60 días</small></div></article>
-          <article><span class="service-icon">✈️</span><div><strong>ENVÍO AÉREO</strong><b>Desde $2.99 / lb</b><small>Entrega de 7 a 15 días</small></div></article>
-          <article><span class="service-icon express">EXPRESS</span><div><strong>ENVÍO EXPRESS</strong><b>Desde $4.99 / lb</b><small>Entrega de 48 a 72 horas</small></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="calculator-section" id="calculadora">
-      <div class="shell calculator-grid">
-        <div class="calculator-copy">
-          <span class="eyebrow">COTIZA EN SEGUNDOS</span>
-          <h2>Calcula tu envío</h2>
-          <p>Selecciona el tipo de servicio, escribe las libras y obtén un estimado inmediato.</p>
-          <div class="mini-benefits">
-            <div>✓ Precios transparentes</div><div>✓ Sin cargos ocultos</div><div>✓ Atención todos los días</div>
-          </div>
-        </div>
-        <aside class="calculator-card">
-          <div class="tabs" id="ship-tabs"></div>
-          <label for="pounds">Libras totales</label>
-          <div class="input-wrap"><input id="pounds" type="number" min="0" step="0.1" placeholder="Ej: 25"><span>lb</span></div>
-          <label class="box-option"><input id="store-box" type="checkbox"><span><strong>Agregar caja de la tienda</strong><small>+$3.00</small></span></label>
-          <div class="summary-box">
-            <div><span id="shipping-label">Envío (Marítimo)</span><b id="shipping-cost">$0.00</b></div>
-            <div><span>Cargo del sistema</span><b id="system-cost">$1.30</b></div>
-            <div><span>Caja de la tienda</span><b id="box-cost">$0.00</b></div>
-            <div class="total-line"><span>Total estimado</span><b id="total-cost">$1.30</b></div>
-          </div>
-          <small class="fine-print">* Precios sujetos a cambios sin previo aviso.</small>
-        </aside>
-      </div>
-    </section>
-
-    <section class="box-offers" id="ofertas-cajas">
-      <div class="shell">
-        <div class="offers-title"><span></span><h2>OFERTAS DE CAJAS</h2><span></span></div>
-        <div class="carousel">
-          <button class="carousel-arrow" id="carousel-prev" aria-label="Anterior">‹</button>
-          <div class="carousel-viewport"><div class="carousel-track" id="carousel-track">
-            <article class="box-slide"><div class="box-card"><div><small>CAJA</small><strong>12×12×12</strong><b>$30</b></div><img src="box-12-v54.png" alt="Caja 12x12x12"></div></article>
-            <article class="box-slide"><div class="box-card"><div><small>CAJA</small><strong>14×14×14</strong><b>$45</b></div><img src="box-14-v54.png" alt="Caja 14x14x14"></div></article>
-            <article class="box-slide"><div class="box-card"><div><small>CAJA</small><strong>16×16×16</strong><b>$60</b></div><img src="box-16-v54.png" alt="Caja 16x16x16"></div></article>
-            <article class="box-slide"><div class="box-card"><div><small>CAJA</small><strong>18×18×18</strong><b>$75</b></div><img src="box-18-v54.png" alt="Caja 18x18x18"></div></article>
-          </div></div>
-          <button class="carousel-arrow" id="carousel-next" aria-label="Siguiente">›</button>
-        </div>
-        <div class="carousel-dots" id="carousel-dots"></div>
-      </div>
-    </section>
-
-    <section class="products-section" id="productos">
-      <div class="shell">
-        <div class="section-head"><div><span class="eyebrow">TIENDA ZONA 3B</span><h2>Productos para tu familia</h2><p>Artículos útiles y esenciales listos para enviar a Cuba.</p></div><a class="red-button" id="products-whatsapp" href="#">Consultar productos</a></div>
-        <div class="products-grid">
-          <article><div>🌀</div><strong>Ventiladores</strong></article><article><div>🔦</div><strong>Lámparas</strong></article><article><div>🍪</div><strong>Alimentos</strong></article><article><div>🧴</div><strong>Aseo</strong></article><article><div>🧼</div><strong>Limpieza</strong></article><article><div>🍲</div><strong>Hogar</strong></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section" id="nosotros">
-      <div class="shell about-grid">
-        <div><span class="eyebrow">ZONA 3B BRANDON</span><h2>Todo en un solo lugar</h2><p>Compra, prepara tu paquete y coordina el envío con un equipo que habla tu idioma y entiende tus necesidades.</p></div>
-        <div class="about-points"><div><b>✓</b><span><strong>Empaque seguro</strong><small>Protegemos tus paquetes.</small></span></div><div><b>✓</b><span><strong>Cobertura total</strong><small>En toda Cuba.</small></span></div><div><b>✓</b><span><strong>Soporte personalizado</strong><small>Estamos para ayudarte.</small></span></div></div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contacto">
-      <div class="shell contact-card">
-        <div><span class="eyebrow">VISÍTANOS</span><h2>Zona 3B Brandon</h2><p><strong id="address-1"></strong><br><span id="address-2"></span></p><p><strong>Todos los días:</strong> 9:00am – 6:00pm</p><div class="contact-actions"><a id="map-link" class="btn-primary" href="#">CÓMO LLEGAR</a><a id="money-whatsapp" class="btn-outline" href="#">ENVIAR DINERO</a></div></div>
-        <img src="map-preview-v54.jpg" alt="Mapa de Zona 3B Brandon">
-      </div>
-    </section>
-  </main>
-
-  <section class="trust-strip"><div class="shell trust-grid"><article><span>◇</span><div><strong>SIN LÍMITES</strong><small>En tus envíos</small></div></article><article><span>⬡</span><div><strong>EMPAQUE SEGURO</strong><small>Protegemos tus paquetes</small></div></article><article><span>◉</span><div><strong>COBERTURA TOTAL</strong><small>En toda Cuba</small></div></article><article><span>◔</span><div><strong>SOPORTE 24/7</strong><small>Estamos para ayudarte</small></div></article></div></section>
-
-  <footer><div class="shell footer-grid"><div><img src="logo-v54.png" alt="Zona 3B Brandon"><p>Envíos y productos para Cuba desde Brandon, Florida.</p></div><div><strong>Contacto</strong><a id="top-phone" href="#">(813) 900-5831</a><a id="top-whatsapp" href="#">WhatsApp</a></div><div><strong>Horario</strong><span>Todos los días</span><span>9:00am – 6:00pm</span></div></div></footer>
-
-  <a class="floating floating-whatsapp" id="floating-whatsapp" href="#" aria-label="WhatsApp">💬</a>
-  <a class="floating floating-up" href="#inicio" aria-label="Volver arriba">↑</a>
-  <script src="config.js"></script>
-  <script src="script-v54.js"></script>
-</body>
-</html>
+  </div>
+</section>
+<section class="services" id="envios"><div class="shell"><div class="section-label">NUESTROS SERVICIOS</div><div class="service-grid">
+  <article><span class="service-icon">🚢</span><div><strong>ENVÍO MARÍTIMO</strong><b>Desde $1.99 / lb</b><small>Entrega de 30 a 60 días</small></div></article>
+  <article><span class="service-icon">✈️</span><div><strong>ENVÍO AÉREO</strong><b>Desde $2.99 / lb</b><small>Entrega de 7 a 15 días</small></div></article>
+  <article><span class="service-icon express">EXPRESS</span><div><strong>ENVÍO EXPRESS</strong><b>Desde $4.99 / lb</b><small>Entrega de 48 a 72 horas</small></div></article>
+</div></div></section>
+<section class="trust-strip"><div class="shell trust-grid"><article><span>◇</span><div><strong>SIN LÍMITES</strong><small>En tus envíos</small></div></article><article><span>⬡</span><div><strong>EMPAQUE SEGURO</strong><small>Protegemos tus paquetes</small></div></article><article><span>◉</span><div><strong>COBERTURA TOTAL</strong><small>En toda Cuba</small></div></article><article><span>◔</span><div><strong>SOPORTE PERSONALIZADO</strong><small>Estamos para ayudarte</small></div></article></div></section>
+<section class="calculator-section" id="calculadora"><div class="shell calculator-grid"><div class="calculator-copy"><span class="eyebrow">COTIZA EN SEGUNDOS</span><h2>Calcula tu envío</h2><p>Selecciona el tipo de servicio, escribe las libras y obtén un estimado inmediato.</p><div class="mini-benefits"><div>✓ Precios transparentes</div><div>✓ Sin cargos ocultos</div><div>✓ Atención todos los días</div></div></div><aside class="calculator-card"><div class="tabs" id="ship-tabs"></div><label for="pounds">Libras totales</label><div class="input-wrap"><input id="pounds" type="number" min="0" step="0.1" placeholder="Ej: 25"><span>lb</span></div><label class="box-option"><input id="store-box" type="checkbox"><span><strong>Agregar caja de la tienda</strong><small>+$3.00</small></span></label><div class="summary-box"><div><span id="shipping-label">Envío (Marítimo)</span><b id="shipping-cost">$0.00</b></div><div><span>Cargo del sistema</span><b id="system-cost">$1.30</b></div><div><span>Caja de la tienda</span><b id="box-cost">$0.00</b></div><div class="total-line"><span>Total estimado</span><b id="total-cost">$1.30</b></div></div><small class="fine-print">* Precios sujetos a cambios sin previo aviso.</small></aside></div></section>
+<section class="box-offers" id="ofertas-cajas"><div class="shell"><div class="offers-title"><span></span><h2>OFERTAS DE CAJAS</h2><span></span></div><div class="carousel"><button class="carousel-arrow" id="carousel-prev">‹</button><div class="carousel-viewport"><div class="carousel-track" id="carousel-track"><article class="box-slide"><div class="box-card"><div><small>CAJA</small><strong>12×12×12</strong><b>$30</b></div><img src="box-12-v54.png" alt="Caja 12x12x12"></div></article><article class="box-slide"><div class="box-card"><div><small>CAJA</small><strong>14×14×14</strong><b>$45</b></div><img src="box-14-v54.png" alt="Caja 14x14x14"></div></article><article class="box-slide"><div class="box-card"><div><small>CAJA</small><strong>16×16×16</strong><b>$60</b></div><img src="box-16-v54.png" alt="Caja 16x16x16"></div></article><article class="box-slide"><div class="box-card"><div><small>CAJA</small><strong>18×18×18</strong><b>$75</b></div><img src="box-18-v54.png" alt="Caja 18x18x18"></div></article></div></div><button class="carousel-arrow" id="carousel-next">›</button></div><div class="carousel-dots" id="carousel-dots"></div></div></section>
+<section class="products-section" id="productos"><div class="shell"><div class="section-head"><div><span class="eyebrow">TIENDA ZONA 3B</span><h2>Productos para tu familia</h2><p>Artículos útiles y esenciales listos para enviar a Cuba.</p></div><a class="red-button" id="products-whatsapp" href="#">Consultar productos</a></div><div class="products-grid"><article><div>🌀</div><strong>Ventiladores</strong></article><article><div>🔦</div><strong>Lámparas</strong></article><article><div>🍪</div><strong>Alimentos</strong></article><article><div>🧴</div><strong>Aseo</strong></article><article><div>🧼</div><strong>Limpieza</strong></article><article><div>🍲</div><strong>Hogar</strong></article></div></div></section>
+<section class="about-section" id="nosotros"><div class="shell about-grid"><div><span class="eyebrow">ZONA 3B BRANDON</span><h2>Todo en un solo lugar</h2><p>Compra, prepara tu paquete y coordina el envío con un equipo que habla tu idioma y entiende tus necesidades.</p></div><div class="about-points"><div><b>✓</b><span><strong>Empaque seguro</strong><small>Protegemos tus paquetes.</small></span></div><div><b>✓</b><span><strong>Cobertura total</strong><small>En toda Cuba.</small></span></div><div><b>✓</b><span><strong>Soporte personalizado</strong><small>Estamos para ayudarte.</small></span></div></div></div></section>
+<section class="contact-section" id="contacto"><div class="shell contact-card"><div><span class="eyebrow">VISÍTANOS</span><h2>Zona 3B Brandon</h2><p><strong id="address-1"></strong><br><span id="address-2"></span></p><p><strong>Todos los días:</strong> 9:00am – 6:00pm</p><div class="contact-actions"><a id="map-link" class="btn-primary" href="#">CÓMO LLEGAR</a><a id="money-whatsapp" class="btn-outline" href="#">ENVIAR DINERO</a></div></div><img src="map-preview-v54.jpg" alt="Mapa de Zona 3B Brandon"></div></section>
+</main>
+<footer><div class="shell footer-grid"><div><img src="logo-v54.png" alt="Zona 3B Brandon"><p>Envíos y productos para Cuba desde Brandon, Florida.</p></div><div><strong>Contacto</strong><a id="top-phone" href="#">(813) 900-5831</a><a id="top-whatsapp" href="#">WhatsApp</a></div><div><strong>Horario</strong><span>Todos los días</span><span>9:00am – 6:00pm</span></div></div></footer>
+<a class="floating floating-whatsapp" id="floating-whatsapp" href="#" aria-label="WhatsApp">💬</a><a class="floating floating-up" href="#inicio" aria-label="Volver arriba">↑</a>
+<script src="config.js?v=6.0.0"></script><script src="script-v60.js?v=6.0.0"></script>
+</body></html>
