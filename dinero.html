@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Información sobre el servicio presencial de envío de dinero a Cuba disponible en Zona 3B Brandon.">
+  <title>Servicio presencial de envío de dinero | Zona 3B Brandon</title>
+  <link rel="icon" href="logo-v54.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-v60.css">
+</head>
+<body class="money-page">
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html"><img src="logo-v54.png" alt="Zona 3B"><div><strong>ZONA <span>3B</span></strong><small>BRANDON</small></div></a>
+      <a class="portal" href="index.html">Volver al inicio</a>
+    </div>
+  </header>
+  <main>
+    <section class="money-page-hero">
+      <div class="shell">
+        <span class="kicker">DISPONIBLE EN NUESTRA TIENDA</span>
+        <h1>Envío de dinero a Cuba</h1>
+        <p>Este servicio se brinda únicamente de forma presencial en Zona 3B Brandon. No se realizan operaciones de envío de dinero mediante esta página web.</p>
+        <a class="btn primary" id="map-money" href="#">Cómo llegar a la tienda</a>
+        <a class="btn secondary" id="money-page-wa" href="#">Consultar requisitos</a>
+      </div>
+    </section>
+    <section class="money-detail">
+      <div class="shell detail-grid">
+        <article><span>01</span><h3>Visita la tienda</h3><p>Acude personalmente a nuestra ubicación durante el horario comercial.</p></article>
+        <article><span>02</span><h3>Consulta las condiciones</h3><p>Nuestro equipo te informa la tasa, disponibilidad, requisitos y tiempo estimado.</p></article>
+        <article><span>03</span><h3>Completa el servicio</h3><p>La operación y el pago se realizan directamente con nuestro personal en la tienda.</p></article>
+      </div>
+      <div class="shell notice">
+        <b>Información importante</b>
+        <p><strong>No envíes dinero ni datos de pago mediante este sitio web.</strong> La disponibilidad, tasa, método de entrega, límites y tiempos pueden cambiar y se confirman presencialmente en Zona 3B Brandon.</p>
+        <p><b>Dirección:</b> 2135 South 78th St, Tampa, FL 33619<br><b>Horario:</b> Todos los días, 9:00am–6:00pm</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="shell footer-bottom">© 2026 Zona 3B Brandon · (813) 900-5831</div></footer>
+  <script src="config.js"></script>
+  <script>
+    const c=window.ZONA3B_SITE;
+    document.getElementById('map-money').href=c.mapsUrl;
+    document.getElementById('money-page-wa').href=`https://wa.me/${c.whatsappDigits}?text=${encodeURIComponent('Hola, deseo consultar los requisitos del servicio presencial de envío de dinero a Cuba en la tienda.')}`;
+  </script>
+</body>
+</html>
