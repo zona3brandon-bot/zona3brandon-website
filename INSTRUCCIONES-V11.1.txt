@@ -1,0 +1,10 @@
+ZONA 3B TRACKING PRO v11.1
+
+CAMBIO PRINCIPAL:
+- Cuando el historial contiene SALIDA ADUANA, LIBERADO POR ADUANA, CUSTOMS CLEARED o un movimiento posterior a Entregado a Aduana, la etapa cambia automáticamente a EN DISTRIBUCIÓN.
+- Se muestra una animación de camión avanzando hacia el destino.
+- Aparece el aviso: Aduana completada — El paquete está en distribución o camino a su destino.
+
+SUBIDA:
+Sube todo el contenido de esta carpeta al repositorio zona3brandon-website y reemplaza los archivos existentes.
+Commit sugerido: ACTUALIZACION V11.1 ANIMACION DESPUES DE ADUANA
