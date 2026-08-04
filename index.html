@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Zona 3B Brandon: tienda, envíos de paquetes y servicio presencial de envío de dinero a Cuba desde Tampa, Florida.">
   <meta name="theme-color" content="#061a3a">
-  <meta name="build-version" content="6.2">
+  <meta name="build-version" content="6.3">
   <title>Zona 3B Brandon | Envíos, tienda y servicio de dinero a Cuba</title>
   <link rel="icon" href="logo-zona3b-oficial.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles-v62.css">
+  <link rel="stylesheet" href="styles-v63.css">
 </head>
 <body>
   <header class="site-header">
@@ -75,9 +75,9 @@
       <div class="shell">
         <div class="section-label">NUESTROS SERVICIOS</div>
         <div class="service-grid">
-          <article><div class="service-icon">🚢</div><div><h3>Envío marítimo</h3><b>Desde $1.99 / lb</b><small>Entrega estimada de 30 a 60 días</small></div></article>
-          <article><div class="service-icon">✈️</div><div><h3>Envío aéreo</h3><b>Desde $2.99 / lb</b><small>Entrega estimada de 7 a 15 días</small></div></article>
-          <article><div class="service-icon express">EXPRESS</div><div><h3>Envío express</h3><b>Desde $4.99 / lb</b><small>Entrega estimada de 48 a 72 horas</small></div></article>
+          <article><div class="service-icon">🚢</div><div><h3>Envío marítimo</h3><b>$1.99 / lb</b><small>Mínimo 15 lb · Máximo 98 lb</small><small>30 a 60 días laborables</small></div></article>
+          <article><div class="service-icon">✈️</div><div><h3>Envío aéreo</h3><b>$2.99 / lb</b><small>Mínimo 15 lb · Máximo 98 lb</small><small>7 a 15 días laborables</small></div></article>
+          <article><div class="service-icon express">EXPRESS</div><div><h3>Envío express</h3><b>$4.99 / lb</b><small>Mínimo 10 lb · Máximo 98 lb</small><small>Habana: 48–72 h · Provincias: 3–5 días</small></div></article>
           <article class="money-card"><div class="service-icon">💵</div><div><h3>Envío de dinero</h3><b>Servicio presencial</b><small>Disponible directamente en nuestra tienda</small></div></article>
         </div>
       </div>
@@ -85,7 +85,7 @@
 
     <section class="feature-strip">
       <div class="shell strip-grid">
-        <div><span>◇</span><b>Sin límites</b><small>En tus envíos</small></div>
+        <div><span>◇</span><b>Hasta 98 lb</b><small>Por envío</small></div>
         <div><span>⬡</span><b>Empaque seguro</b><small>Protegemos tus paquetes</small></div>
         <div><span>◉</span><b>Cobertura total</b><small>En toda Cuba</small></div>
         <div><span>◔</span><b>Soporte personalizado</b><small>Estamos para ayudarte</small></div>
@@ -127,7 +127,8 @@
         <div class="calculator-card">
           <div class="tabs" id="ship-tabs"></div>
           <label for="pounds">Libras totales</label>
-          <div class="input-wrap"><input id="pounds" type="number" min="0" step="0.1" placeholder="Ej: 25"><span>lb</span></div>
+          <div class="input-wrap"><input id="pounds" type="number" min="15" max="98" step="0.1" placeholder="Ej: 25"><span>lb</span></div>
+          <div class="calc-rule" id="calc-rule">Marítimo: mínimo 15 lb, máximo 98 lb · 30 a 60 días laborables.</div>
           <label class="check-row"><input id="store-box" type="checkbox"><span><b>Agregar caja de la tienda</b><small>+ $3.00</small></span></label>
           <div class="summary-box">
             <div><span id="shipping-label">Envío (Marítimo)</span><b id="shipping-cost">$0.00</b></div>
@@ -135,7 +136,7 @@
             <div><span>Caja de la tienda</span><b id="box-cost">$0.00</b></div>
             <div class="total"><span>Total estimado</span><b id="total-cost">$1.30</b></div>
           </div>
-          <small>* Estimado sujeto a confirmación en tienda.</small>
+          <small id="calc-message">* Escribe una cantidad entre el mínimo y máximo permitido. Estimado sujeto a confirmación en tienda.</small>
         </div>
       </div>
     </section>
@@ -192,6 +193,6 @@
   </footer>
 
   <script src="config.js"></script>
-  <script src="script-v62.js"></script>
+  <script src="script-v63.js"></script>
 </body>
 </html>

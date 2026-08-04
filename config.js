@@ -7,9 +7,9 @@ window.ZONA3B_SITE = {
   portalUrl: "https://portal.zona3brandon.us",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=2135+South+78th+St%2C+Tampa%2C+FL+33619",
   rates: {
-    maritime: { label: "Marítimo", rate: 1.99, icon: "🚢" },
-    air: { label: "Aéreo", rate: 2.99, icon: "✈" },
-    express: { label: "Express", rate: 4.99, icon: "⚡" }
+    maritime: { label: "Marítimo", rate: 1.99, icon: "🚢", min: 15, max: 98, delivery: "30 a 60 días laborables" },
+    air: { label: "Aéreo", rate: 2.99, icon: "✈", min: 15, max: 98, delivery: "7 a 15 días laborables" },
+    express: { label: "Express", rate: 4.99, icon: "⚡", min: 10, max: 98, delivery: "La Habana: 48 a 72 horas · Provincias: 3 a 5 días" }
   },
   systemFee: 1.30,
   storeBoxFee: 3.00

@@ -15,3 +15,10 @@ Actualización lista para GitHub y Cloudflare Pages.
 3. Sube todos los archivos de esta carpeta a la raíz del repositorio.
 4. Confirma el commit.
 5. En Cloudflare Pages, verifica que se complete el nuevo deployment.
+
+
+## Actualización v6.3
+- Marítimo: $1.99/lb, mínimo 15 lb, máximo 98 lb, 30–60 días laborables.
+- Aéreo: $2.99/lb, mínimo 15 lb, máximo 98 lb, 7–15 días laborables.
+- Express: $4.99/lb, mínimo 10 lb, máximo 98 lb; La Habana 48–72 horas y provincias 3–5 días.
+- La calculadora valida automáticamente los límites de cada servicio.
