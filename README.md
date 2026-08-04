@@ -18,3 +18,15 @@ Sube todos los archivos a la raíz del repositorio reemplazando los anteriores.
 - La función consulta el rastreador oficial y devuelve solamente el estado procesado a la página de Zona 3B.
 - Para que el seguimiento funcione, despliegue el repositorio como Cloudflare Pages incluyendo la carpeta `functions`. GitHub Pages por sí solo no ejecuta la función.
 - La disponibilidad depende del sitio oficial de Correos de Cuba y puede cambiar si dicho sitio modifica su formulario.
+
+## v6.7 — Corrección de pestaña Seguimiento
+- El enlace de seguimiento ahora aparece como **RASTREO** en el menú principal de todas las páginas.
+- Estilo destacado para facilitar su localización.
+- Menú compactado para evitar que el enlace quede fuera de pantalla.
+- Archivos CSS y JavaScript versionados para evitar caché antigua de Cloudflare.
+
+## v6.8 — Corrección del rastreo
+- Nueva función de Cloudflare con conservación de cookies/sesión.
+- Detección del formulario dinámico y compatibilidad con consultas AJAX.
+- Analizador mejorado de movimientos, fechas, ubicaciones y país de origen.
+- Archivo de rastreo versionado para evitar caché anterior.
