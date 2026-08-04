@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Consulta el estado de tu paquete enviado a Cuba con Zona 3B Brandon.">
-  <meta name="theme-color" content="#061a3a"><meta name="build-version" content="7.0">
+  <meta name="theme-color" content="#061a3a"><meta name="build-version" content="8.0">
   <title>Seguimiento de paquetes | Zona 3B Brandon</title>
   <link rel="icon" href="logo-zona3b-oficial.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles-v67.css">
@@ -24,11 +24,11 @@
 </main>
 <a class="float whatsapp" id="floating-whatsapp" href="#" aria-label="WhatsApp">●</a><a class="float up" href="#" aria-label="Subir">↑</a>
 <footer><div class="shell footer-grid"><div class="footer-brand"><img src="logo-zona3b-oficial.png" alt=""><div><b>Zona 3B Brandon</b><small>Bueno, bonito y barato</small></div></div><div><b>Servicios</b><a href="index.html#envios">Envíos a Cuba</a><a href="seguimiento.html">Seguimiento</a><a href="dinero.html">Servicio de dinero</a></div><div><b>Contacto</b><span>(813) 900-5831</span><span>2135 South 78th St</span><span>Tampa, FL 33619</span></div><div><b>Horario</b><span>Todos los días</span><span>9:00am – 6:00pm</span></div></div><div class="shell footer-bottom">© 2026 Zona 3B Brandon. Todos los derechos reservados.</div></footer>
-<script src="config.js?v=70"></script>
+<script src="config.js?v=80"></script>
 <script>
 (function(){
 'use strict';
-const cfg=window.ZONA3B_SITE||{whatsappDigits:'18139005831',portalUrl:'#'};
+const cfg=window.ZONA3B_SITE||{whatsappDigits:'18139005831',portalUrl:'#',trackingApiUrl:''};
 const $=id=>document.getElementById(id);
 const form=$('tracking-form'), codeInput=$('tracking-code'), year=$('tracking-year'), result=$('tracking-result');
 const wa=m=>`https://wa.me/${cfg.whatsappDigits}?text=${encodeURIComponent(m)}`;
@@ -48,14 +48,16 @@ async function lookup(){
  if(!/^[A-Z0-9-]{6,40}$/.test(code)){render({ok:false,message:'Revisa el número de rastreo. Debe contener entre 6 y 40 letras o números.'},code);return;}
  const btn=form.querySelector('button'), txt=btn.querySelector('.button-text'), load=btn.querySelector('.button-loading');
  btn.disabled=true;txt.hidden=true;load.hidden=false;
- result.innerHTML='<div class="tracking-loading"><div class="spinner"></div><h2>Consultando el estado…</h2><p>Esto puede tardar unos segundos.</p></div>';
+ result.innerHTML='<div class="tracking-loading"><div class="spinner"></div><h2>Consultando el estado…</h2><p>La primera consulta puede tardar hasta un minuto mientras el servidor se activa.</p></div>';
  const url=new URL(location.href);url.searchParams.set('codigo',code);url.searchParams.set('anio',year.value);history.replaceState(null,'',url);
  try{
-  const controller=new AbortController(); const timer=setTimeout(()=>controller.abort(),25000);
-  const r=await fetch(`/api/seguimiento?codigo=${encodeURIComponent(code)}&anio=${encodeURIComponent(year.value)}&v=70`,{headers:{Accept:'application/json'},cache:'no-store',signal:controller.signal});
+  const controller=new AbortController(); const timer=setTimeout(()=>controller.abort(),75000);
+  const apiBase=String(cfg.trackingApiUrl||'').replace(/\/$/,'');
+  if(!apiBase || apiBase.includes('REEMPLAZAR-')) throw new Error('API_NOT_CONFIGURED');
+  const r=await fetch(`${apiBase}/api/track?codigo=${encodeURIComponent(code)}&anio=${encodeURIComponent(year.value)}`,{headers:{Accept:'application/json'},cache:'no-store',signal:controller.signal});
   clearTimeout(timer); let data; try{data=await r.json();}catch(e){data={ok:false,message:`El servidor respondió con formato inválido (${r.status}).`};}
   render(data,code);
- }catch(err){render({ok:false,message:err&&err.name==='AbortError'?'La consulta tardó demasiado y fue detenida. Intenta nuevamente.':'No fue posible conectar con la función de seguimiento de Cloudflare.'},code);}
+ }catch(err){const msg=err&&err.message==='API_NOT_CONFIGURED'?'Falta configurar la dirección del servidor de rastreo en config.js.':(err&&err.name==='AbortError'?'La consulta tardó demasiado y fue detenida. Intenta nuevamente.':'No fue posible conectar con el servidor de seguimiento.');render({ok:false,message:msg},code);}
  finally{btn.disabled=false;txt.hidden=false;load.hidden=true;}
 }
 form.addEventListener('submit',e=>{e.preventDefault();lookup();});

@@ -6,6 +6,10 @@ window.ZONA3B_SITE = {
   addressLine2: "Tampa, FL 33619",
   portalUrl: "https://portal.zona3brandon.us",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=2135+South+78th+St%2C+Tampa%2C+FL+33619",
+
+  // Servidor profesional de rastreo activo en Render.
+  trackingApiUrl: "https://zona3b-rastreo-server.onrender.com",
+
   rates: {
     maritime: { label: "Marítimo", rate: 1.99, icon: "🚢", min: 15, max: 98, delivery: "30 a 60 días laborables", departures: "Lunes, miércoles y viernes" },
     air: { label: "Aéreo", rate: 2.99, icon: "✈", min: 15, max: 98, delivery: "7 a 15 días laborables", departures: "Martes y viernes" },

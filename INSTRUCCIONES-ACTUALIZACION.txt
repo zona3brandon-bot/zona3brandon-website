@@ -1,0 +1,17 @@
+ZONA 3B BRANDON — ACTUALIZACIÓN v8.1
+
+Servidor conectado:
+https://zona3b-rastreo-server.onrender.com
+
+PARA PUBLICAR:
+1. Descomprime este ZIP.
+2. Sube TODO el contenido de esta carpeta al repositorio zona3brandon-website.
+3. Reemplaza los archivos existentes y confirma el commit.
+4. Espera a que Cloudflare Pages termine el despliegue.
+5. Prueba: https://zona3brandon.us/seguimiento
+
+IMPORTANTE:
+- No subas el ZIP; sube los archivos descomprimidos.
+- El plan gratuito de Render puede tardar hasta 50-60 segundos en activarse después de un tiempo sin uso.
+- La página espera hasta 75 segundos y nunca queda cargando indefinidamente.
+- El servidor de Render ya está configurado; no necesitas modificarlo para esta actualización.
