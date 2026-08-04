@@ -6,11 +6,8 @@
 /*.html
   Cache-Control: no-cache, no-store, must-revalidate
 
-/styles-v67.css
+/config.js
   Cache-Control: no-cache, no-store, must-revalidate
 
-/script-v67.js
-  Cache-Control: no-cache, no-store, must-revalidate
-
-/tracking-v66.js
+/api/*
   Cache-Control: no-cache, no-store, must-revalidate

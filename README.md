@@ -38,3 +38,9 @@ Sube todos los archivos a la raíz del repositorio reemplazando los anteriores.
 - Tiempo máximo de función: 22 segundos.
 - Reconoce movimientos aunque la respuesta oficial no repita el código de rastreo.
 - Reduce los intentos externos para evitar el timeout de Cloudflare.
+
+## v7.0 — Corrección de seguimiento
+- El año aparece incluso si un archivo JavaScript externo no carga.
+- El código y el año se leen desde la URL.
+- La consulta se ejecuta automáticamente al abrir un enlace con `?codigo=`.
+- La lógica principal está integrada en `seguimiento.html` para evitar errores por archivos faltantes o caché.
