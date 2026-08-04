@@ -30,3 +30,11 @@ Sube todos los archivos a la raíz del repositorio reemplazando los anteriores.
 - Detección del formulario dinámico y compatibilidad con consultas AJAX.
 - Analizador mejorado de movimientos, fechas, ubicaciones y país de origen.
 - Archivo de rastreo versionado para evitar caché anterior.
+
+
+## v6.9
+- Evita la carga infinita del seguimiento.
+- Tiempo máximo de consulta en navegador: 30 segundos.
+- Tiempo máximo de función: 22 segundos.
+- Reconoce movimientos aunque la respuesta oficial no repita el código de rastreo.
+- Reduce los intentos externos para evitar el timeout de Cloudflare.
