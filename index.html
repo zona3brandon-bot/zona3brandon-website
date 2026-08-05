@@ -23,7 +23,7 @@
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <nav class="menu">
         <a href="#inicio" class="active">Inicio</a>
-        <a href="https://shop.zona3brandon.us">Tienda</a>
+        <a class="shop-link" href="https://shop.zona3brandon.us" rel="noopener">Tienda</a>
         <a href="#envios">Envíos a Cuba</a>
         <a class="tracking-nav" href="seguimiento.html">Rastreo</a>
         <a href="#dinero">Servicio de dinero</a>
@@ -142,7 +142,7 @@
       </div>
     </section>
 
-    <section class="boxes" id="tienda">
+    <section class="boxes" id="cajas">
       <div class="shell">
         <div class="section-heading"><span class="eyebrow">OFERTAS</span><h2>Cajas listas para enviar</h2></div>
         <div class="boxes-grid">
@@ -186,7 +186,7 @@
   <footer>
     <div class="shell footer-grid">
       <div class="footer-brand"><img src="logo-zona3b-oficial.png" alt=""><div><b>Zona 3B Brandon</b><small>Bueno, bonito y barato</small></div></div>
-      <div><b>Servicios</b><a href="#envios">Envíos a Cuba</a><a class="tracking-nav" href="seguimiento.html">Rastreo</a><a href="#dinero">Servicio de dinero</a><a href="https://shop.zona3brandon.us">Tienda</a></div>
+      <div><b>Servicios</b><a href="#envios">Envíos a Cuba</a><a class="tracking-nav" href="seguimiento.html">Rastreo</a><a href="#dinero">Servicio de dinero</a><a class="shop-link" href="https://shop.zona3brandon.us" rel="noopener">Tienda</a></div>
       <div><b>Contacto</b><span>(813) 900-5831</span><span>2135 South 78th St</span><span>Tampa, FL 33619</span></div>
       <div><b>Horario</b><span>Todos los días</span><span>9:00am – 6:00pm</span></div>
     </div>
@@ -195,5 +195,25 @@
 
   <script src="config.js"></script>
   <script src="script-v67.js"></script>
+
+  <script>
+    // Enlace independiente de la tienda. También corrige marcadores antiguos #tienda.
+    (() => {
+      const SHOP_URL = "https://shop.zona3brandon.us";
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest("a");
+        if (!link) return;
+        const href = (link.getAttribute("href") || "").trim().toLowerCase();
+        const label = (link.textContent || "").trim().toLowerCase();
+        if (href === "#tienda" || (label === "tienda" && !href.includes("shop.zona3brandon.us"))) {
+          event.preventDefault();
+          window.location.assign(SHOP_URL);
+        }
+      }, true);
+      if (window.location.hash.toLowerCase() === "#tienda") {
+        window.location.replace(SHOP_URL);
+      }
+    })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+ACTUALIZACIÓN V13 — ENLACE TIENDA INDEPENDIENTE
+
+1. Sube/reemplaza TODO este contenido en el repositorio zona3brandon-website.
+2. Confirma el commit directamente en la rama main.
+3. Cloudflare Pages desplegará automáticamente el cambio.
+4. Espera a que el deployment muestre estado Success.
+5. Abre https://zona3brandon.us y presiona Ctrl + F5.
+6. El botón TIENDA debe abrir https://shop.zona3brandon.us.
+
+Cambios incluidos:
+- El enlace TIENDA apunta explícitamente a shop.zona3brandon.us.
+- Se eliminó el ancla interna #tienda; la sección de cajas ahora usa #cajas.
+- Se añadió una corrección automática para enlaces o marcadores antiguos #tienda.
+- Se desactivó la caché del HTML para evitar que Cloudflare/navegador mantenga el menú anterior.
