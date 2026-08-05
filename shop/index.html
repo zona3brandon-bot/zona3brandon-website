@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Compra productos disponibles en Zona 3B Brandon para preparar envíos a Cuba.">
+  <meta name="theme-color" content="#071f46">
+  <title>Tienda Online | Zona 3B Brandon</title>
+  <link rel="icon" href="assets/images/logo-zona3b-oficial.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/store.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="https://zona3brandon.us" aria-label="Zona 3B Brandon">
+    <img src="assets/images/logo-zona3b-oficial.png" alt="Zona 3B Brandon">
+    <div><strong>ZONA <span>3B</span></strong><small>TIENDA ONLINE</small></div>
+  </a>
+  <nav><a href="https://zona3brandon.us">Inicio</a><a href="https://zona3brandon.us/seguimiento">Rastreo</a><button id="open-cart" class="cart-button">🛒 Carrito <b id="cart-count">0</b></button></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-content"><span class="eyebrow">COMPRA ONLINE</span><h1>Compra en Brandon<br>y prepara tu caja para Cuba</h1><p>Selecciona solamente productos disponibles en nuestra tienda. Después de recibir tu orden confirmaremos disponibilidad, envío y forma de pago.</p><a href="#catalogo" class="primary-link">VER PRODUCTOS</a></div>
+  </section>
+  <section class="departments-section">
+    <div class="shell"><div class="heading"><span class="eyebrow">DEPARTAMENTOS</span><h2>Compra por categoría</h2></div>
+      <div class="department-grid" id="department-cards">
+        <button data-department="Alimentos">🥫<b>Alimentos</b></button>
+        <button data-department="Aseo Personal y Ropa">🧴<b>Aseo Personal y Ropa</b></button>
+        <button data-department="Farmacia">🩹<b>Farmacia</b></button>
+        <button data-department="Hogar">🏠<b>Hogar</b></button>
+        <button data-department="Electrónica">🔌<b>Electrónica</b></button>
+        <button data-department="Perfumería">🌸<b>Perfumería</b></button>
+      </div>
+    </div>
+  </section>
+  <section class="catalog-section" id="catalogo">
+    <div class="shell">
+      <div class="catalog-head"><div><span class="eyebrow">CATÁLOGO</span><h2 id="catalog-title">Todos los productos</h2></div><span id="product-count">0 productos</span></div>
+      <div class="filters"><div class="search">🔎<input id="search" type="search" placeholder="Buscar producto..."></div><select id="department"><option value="">Todos los departamentos</option><option>Alimentos</option><option>Aseo Personal y Ropa</option><option>Farmacia</option><option>Hogar</option><option>Electrónica</option><option>Perfumería</option></select></div>
+      <div id="product-grid" class="product-grid"><div class="empty">Cargando productos…</div></div>
+    </div>
+  </section>
+</main>
+<aside id="cart-drawer" class="drawer" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow">TU COMPRA</span><h2>Carrito</h2></div><button id="close-cart" aria-label="Cerrar">×</button></div><div id="cart-items"></div><div class="cart-summary"><div><span>Subtotal</span><b id="cart-total">$0.00</b></div><small>El costo del envío y la forma de pago se confirman después de revisar la orden.</small><button id="checkout-button" class="primary">CONTINUAR CON LA ORDEN</button></div></aside>
+<div id="overlay" class="overlay"></div>
+<div id="checkout-modal" class="modal hidden"><div class="modal-card"><button id="close-checkout" class="modal-close">×</button><span class="eyebrow">FINALIZAR ORDEN</span><h2>Información del cliente</h2><p>Completa los datos exactamente como deben aparecer en la orden.</p>
+<form id="checkout-form" class="checkout-grid">
+  <div class="full"><label>Nombre y apellidos</label><input name="customer_name" required></div>
+  <div><label>Teléfono</label><input name="phone" required inputmode="tel"></div><div><label>Correo electrónico (opcional)</label><input name="email" type="email"></div>
+  <div class="full"><label>Dirección completa</label><input name="address" required></div><div><label>Ciudad</label><input name="city"></div><div><label>Estado</label><input name="state"></div><div><label>ZIP Code</label><input name="zip_code"></div><div><label>Número de ID</label><input name="id_number" required></div>
+  <div class="full"><label>Tipo de envío preferido</label><select name="shipping_method"><option value="Por confirmar">Por confirmar con la tienda</option><option value="Marítimo">Marítimo</option><option value="Aéreo">Aéreo</option><option value="Express">Express</option></select></div>
+  <div class="full"><label>Observaciones (opcional)</label><textarea name="notes" rows="3"></textarea></div>
+  <label class="consent full"><input type="checkbox" required> Confirmo que los datos suministrados son correctos y autorizo a Zona 3B Brandon a contactarme para completar la orden.</label>
+  <button class="primary full" type="submit">ENVIAR ORDEN</button><p id="checkout-message" class="full message"></p>
+</form></div></div>
+<footer><div class="shell footer-grid"><div class="footer-brand"><img src="assets/images/logo-zona3b-oficial.png" alt=""><div><b>Zona 3B Brandon</b><small>Bueno, bonito y barato</small></div></div><div><b>Enlaces</b><a href="https://zona3brandon.us">Sitio principal</a><a href="https://zona3brandon.us/seguimiento">Rastreo</a><a href="https://portal.zona3brandon.us">Portal</a></div><div><b>Contacto</b><span>(813) 900-5831</span><span>2135 South 78th St</span><span>Tampa, FL 33619</span></div><div><b>Horario</b><span>Todos los días</span><span>9:00am – 6:00pm</span></div></div><div class="shell copyright">© 2026 Zona 3B Brandon. Todos los derechos reservados.</div></footer>
+<a class="whatsapp" href="https://wa.me/18139005831?text=Hola%2C%20necesito%20ayuda%20con%20la%20tienda%20online" target="_blank" aria-label="WhatsApp">●</a>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="assets/js/store.js"></script>
+</body></html>

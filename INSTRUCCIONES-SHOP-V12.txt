@@ -1,0 +1,11 @@
+ZONA 3B SHOP V12 - INSTALACIÓN
+==============================
+1. En Supabase SQL Editor ejecuta SUPABASE-SHOP-ACTUALIZACION.sql.
+2. En GitHub reemplaza el repositorio con este contenido. La web principal conserva su diseño; únicamente los enlaces Tienda abren shop.zona3brandon.us.
+3. En Cloudflare Pages abre el proyecto zona3brandon-shop > Settings > Builds & deployments.
+4. Cambia Root directory a: shop
+5. Framework preset: None. Build command vacío. Build output directory: /
+6. Guarda y ejecuta Retry deployment / Create deployment.
+7. Abre https://shop.zona3brandon.us.
+
+IMPORTANTE: El proyecto shop de Cloudflare está conectado al mismo repositorio. El Root directory "shop" es lo que hace que publique solamente la tienda y no la web principal.
